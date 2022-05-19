@@ -1,0 +1,39 @@
+<Demoproject>:
+    Screen:
+        name:"screen_2917"
+        canvas.before:
+            Color:
+                rgba:(1.0,1.0,1.0,1.0)
+            Rectangle:
+
+                pos:self.pos
+                size:self.size
+                #source:"light.png"
+        FloatLayout:
+            orientation:"vertical"
+            padding: dp(80)
+            border:70,90,60,10
+            font:'Comic'
+            elevation:40
+
+            MDIconButton:
+                size_hint:(None,None)
+                width:
+                height:
+                pos_hint :{'center_x':0.4, 'center_y':0.05}
+                icon:'play.png'
+                bold:True
+                background_color: (1, .36, .4, .55)
+                on_release: root.play_sound()
+
+            MDIconButton:
+
+                pos_hint :{'center_x':0.55, 'center_y':0.05}
+                icon:'stop.png'
+                bold:True
+                background_color: (1, .36, .4, .55)
+                on_release: self.play_stop()
+                size_hint:(None,None)
+                width:100
+                height:80
+           
